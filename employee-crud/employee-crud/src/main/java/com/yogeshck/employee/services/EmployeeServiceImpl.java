@@ -11,10 +11,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
-    private EmployeeRepository employeeRepository;
+
+    private EmployeeRepository employeeRepository; // dependency to call repository in this layer //autowired in constructor
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
+        this.employeeRepository = employeeRepository;         //ioc provide obj
     }
 
     @Override
